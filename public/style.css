@@ -1,0 +1,86 @@
+.jumbotron {
+    margin-top: 25px;
+    background: rgb(57, 29, 29);
+    color: white;
+    opacity: .6;
+    font-family: "Give You Glory", cursive, sans-serif;
+}
+
+h1 {
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#titleP {
+    font-family: Marvel, cursive, sans-serif;
+    font-size: 24px;
+}
+
+body {
+    background: url("notes.jpeg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+textarea, input {
+    opacity: .6;
+    background: rgb(57, 29, 29);
+    color: white;
+}
+
+h4 {
+    font-size: 40px;
+    color: rgb(57, 29, 29);
+}
+
+.saved {
+    position: relative;
+    margin-top: 230px;
+    background: rgb(57, 29, 29);
+    color: white;
+    opacity: .8;
+}
+
+#submit, #delete, #makeNew, #updater {
+    background: rgb(57, 29, 29);
+    color: white;
+    opacity: .8;
+}
+
+
+#submit:hover, #delete:hover {
+    box-shadow: 3px 5px black;
+}
+
+
+#deleter {
+    margin-left: 25px;
+    background: firebrick;
+    color: white;
+}
+
+.dataTitle {
+    padding-top: 15px;
+}
+
+label {
+    margin-bottom: 0px;
+    font-family: "Give You Glory", cursive, sans-serif;
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#makeNew {
+    position: relative;
+    left: 115px;
+}
+
+#delete {
+    position: relative;
+    bottom: 38px;
+    left: 70px;
+}

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Give+You+Glory" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Marvel" />
+
+    <title>Note Taker</title>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="text-center">
+                <div class="jumbotron">
+                    <h1>Note Taker</h1>
+                    <p id="titleP">Welcome! <br> Note Taker is a very simple note taking application built with express and MongoDb. Hope you find it as useful as I do!</p>
+                </div>
+
+
+            <div class="row">
+                <div class="col-md-6" id="name">
+                    <label for="title">Title</label>
+                    <br>
+                    <input type="text" placeholder="Name your note here" style="width: 400px" id="title">
+                    <hr>
+                    <textarea id="note" style="height: 300px; width: 400px">
+
+                    </textarea>
+                    <hr>
+                    <div id="actionButton" style="width: 25%">
+                    <button class="btn btn-primary" type="submit" id="makeNew">Submit</button>
+                    </div>
+                    <button class="btn btn-primary" id="delete">Delete All Notes</button>
+                </div>
+                <br>
+                <div class="col-md-6">
+                    <div class="saved">
+                        <div id="results">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+<script src="main.js"></script>
+</body>
+</html>
