@@ -75,7 +75,7 @@ app.get("/all", function(req, res) {
         if(error) {
             console.log(error);
         } else {
-            res.send(found);
+            JSON.stringify(found);
         }
     });
 });
