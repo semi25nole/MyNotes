@@ -32,7 +32,7 @@ $(document).on("click", "#makeNew", function() {
             $("#title").val("");
         });
 
-    results();
+    window.location.reload(true);
 
 });
 
