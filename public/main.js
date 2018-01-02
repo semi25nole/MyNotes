@@ -1,3 +1,7 @@
+$(document).ready(function() {
+    results();
+});
+
 function results () {
     $("#results").empty();
     $.getJSON("/all", function(data) {
@@ -6,9 +10,7 @@ function results () {
                 data[i]._id + ">" + data[i].title + "<button class='btn btn-small' id='deleter'>X</button>" + "</p>" + "<hr>");
         }
     });
-}
-
-results();
+};
 
 $(document).on("click", "#makeNew", function() {
 
@@ -32,7 +34,7 @@ $(document).on("click", "#makeNew", function() {
             $("#title").val("");
         });
 
-    window.location.reload(true);
+    results();
 
 });
 
@@ -70,7 +72,7 @@ $(document).on("click", "#deleter", function() {
         }
     });
 
-    window.location.reload(true);
+    results();
 });
 
 
