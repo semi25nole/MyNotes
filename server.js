@@ -34,7 +34,7 @@ mongoose.connect(MONGODB_URI, {
 
 
 //Let's configure out database
-var databaseUrl = "newDb";
+var databaseUrl = "NOTE";
 var collections = ["notes"];
 
 
