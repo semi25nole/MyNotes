@@ -15,6 +15,8 @@ var app = express();
 //Create a variable to hold the port
 var port = 3000;
 
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines"
+
 
 //Middleware
 app.use(morgan('dev'));
@@ -26,7 +28,7 @@ app.use(express.static("public"));
 
 //connect to mongodb
 mongoose.Promise = Promise;
-mongoose.connect("mongodb://localhost/myNotes", {
+mongoose.connect(MONGODB_URI, {
     useMongoClient: true
 });
 
