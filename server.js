@@ -45,7 +45,6 @@ var db = mongojs(databaseUrl, collections);
 //assign any errors into the console
 db.on("error", function(error) {
     console.log("Database Error: ", error);
-    res.send(error);
 });
 
 
