@@ -21,8 +21,10 @@ var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines
 //Middleware
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({
-    extended: false
+    extended: true
 }));
+app.use(bodyParser.json());
+app.use(bodyParser.text());
 app.use(express.static("public"));
 
 

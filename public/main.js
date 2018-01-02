@@ -1,6 +1,4 @@
-$(document).ready(function() {
-    results();
-});
+results();
 
 function results () {
     $("#results").empty();
@@ -34,7 +32,7 @@ $(document).on("click", "#makeNew", function() {
             $("#title").val("");
         });
 
-    results();
+    window.location.reload(true);
 
 });
 
@@ -72,7 +70,7 @@ $(document).on("click", "#deleter", function() {
         }
     });
 
-    results();
+    window.location.reload(true);
 });
 
 
