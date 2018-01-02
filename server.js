@@ -13,7 +13,7 @@ var app = express();
 
 
 //Create a variable to hold the port
-var port = process.env.port || 3000;
+var port = 3000;
 
 
 //Middleware
