@@ -13,9 +13,9 @@ var app = express();
 
 
 //Create a variable to hold the port
-var port = 3000;
+var port = process.env.PORT || 3000;
 
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines"
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://heroku_fqzk87w2:h2fn22ubnmdisjsos7qd4r14fr@ds239047.mlab.com:39047/heroku_fqzk87w2"
 
 
 //Middleware
