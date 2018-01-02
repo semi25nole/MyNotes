@@ -45,6 +45,7 @@ var db = mongojs(databaseUrl, collections);
 //assign any errors into the console
 db.on("error", function(error) {
     console.log("Database Error: ", error);
+    res.send(error);
 });
 
 
@@ -62,6 +63,8 @@ app.post("/submit", function(req, res) {
     db.notes.insert(req.body, function(error, saved) {
         if(error) {
             console.log(error);
+        } else {
+            console.log(saved);
         }
     });
 });
