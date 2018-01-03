@@ -12,10 +12,6 @@ var mongoose = require("mongoose");
 var app = express();
 
 
-//Create a variable to hold the port
-var port = process.env.PORT || 2000;
-
-
 //Middleware
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({
@@ -155,6 +151,6 @@ app.get("/clear", function(req, res) {
 
 
 //Tell the app to listen
-app.listen(port, function() {
-    console.log("App is listening on: " + port);
+app.listen(process.env.PORT, function() {
+    console.log("App is listening on: " + process.env.PORT);
 });
