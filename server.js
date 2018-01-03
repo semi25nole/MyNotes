@@ -13,9 +13,7 @@ var app = express();
 
 
 //Create a variable to hold the port
-var port = process.env.PORT || 3000;
-
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://heroku_fqzk87w2:h2fn22ubnmdisjsos7qd4r14fr@ds239047.mlab.com:39047/heroku_fqzk87w2"
+var port = 2000;
 
 
 //Middleware
@@ -30,9 +28,10 @@ app.use(express.static("public"));
 
 //connect to mongodb
 mongoose.Promise = Promise;
-mongoose.connect(MONGODB_URI, {
-    useMongoClient: true
-});
+mongoose.connect('mongodb://localhost/NOTES');
+mongoose.connection.once("open", function() {
+    console.log("Connection has been made!");
+})
 
 
 //Let's configure out database
@@ -77,7 +76,7 @@ app.get("/all", function(req, res) {
         if(error) {
             console.log(error);
         } else {
-            JSON.stringify(found);
+            res.send(found);
         }
     });
 });

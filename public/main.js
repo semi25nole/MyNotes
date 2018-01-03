@@ -1,5 +1,3 @@
-results();
-
 function results () {
     $("#results").empty();
     $.getJSON("/all", function(data) {
@@ -8,7 +6,10 @@ function results () {
                 data[i]._id + ">" + data[i].title + "<button class='btn btn-small' id='deleter'>X</button>" + "</p>" + "<hr>");
         }
     });
+
 };
+
+results();
 
 $(document).on("click", "#makeNew", function() {
 
@@ -32,6 +33,8 @@ $(document).on("click", "#makeNew", function() {
             $("#title").val("");
         });
 
+    results();
+
     window.location.reload(true);
 
 });
@@ -47,7 +50,6 @@ $("#delete").on("click", function() {
         }
     });
 });
-
 
 $(document).on("click", "#deleter", function() {
     // Save the p tag that encloses the button
@@ -69,6 +71,8 @@ $(document).on("click", "#deleter", function() {
             $("#actionButton").html("<button class='btn btn-primary' id='makeNew'>Submit</button>");
         }
     });
+
+    results();
 
     window.location.reload(true);
 });
