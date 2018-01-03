@@ -30,7 +30,7 @@ var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/NOTE"
 
 //connect to mongodb
 mongoose.Promise = global.Promise;
-mongoose.connect(MONGODB_URI, mongoOptions);
+mongoose.connect(MONGODB_URI);
 mongoose.connection.on('error', (err) => {
     console.error(`MongoDB connection error: ${err}`);
     process.exit(1);
