@@ -26,7 +26,8 @@ app.use(bodyParser.text());
 app.use(express.static("public"));
 
 
-var MONGODB_URI = "mongodb://heroku_fqzk87w2:h2fn22ubnmdisjsos7qd4r14fr@ds239047.mlab.com:39047/heroku_fqzk87w2"
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+
 
 //connect to mongodb
 mongoose.Promise = global.Promise;
@@ -39,7 +40,7 @@ mongoose.connection.on('error', (err) => {
 
 
 //Let's configure out database
-var databaseUrl = "NOTE";
+var databaseUrl = "mongoHeadlines";
 var collections = ["notes"];
 
 
