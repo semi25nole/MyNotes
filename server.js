@@ -26,7 +26,7 @@ app.use(bodyParser.text());
 app.use(express.static("public"));
 
 
-var MONGODB_URI = process.env.MONGODB_URI;
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://Semi25nole:Chance11@ds239047.mlab.com:39047/heroku_fqzk87w2";
 
 
 //connect to mongodb
