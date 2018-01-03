@@ -13,7 +13,7 @@ var app = express();
 
 
 //Create a variable to hold the port
-var port = 2000;
+var port = process.env.PORT || 2000;
 
 
 //Middleware
@@ -155,5 +155,5 @@ app.get("/clear", function(req, res) {
 
 //Tell the app to listen
 app.listen(port, function() {
-    console.log("App is listening on Port: " + port);
+    console.log("App is listening on: " + port);
 });
