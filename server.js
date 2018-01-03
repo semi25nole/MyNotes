@@ -27,11 +27,15 @@ app.use(express.static("public"));
 
 
 //connect to mongodb
-mongoose.Promise = Promise;
+mongoose.Promise = global.Promise;
+
 mongoose.connect('mongodb://localhost/NOTES');
+
 mongoose.connection.once("open", function() {
     console.log("Connection has been made!");
-})
+}).on('error', function(error) {
+    console.log('Connection Error: ', error);
+});
 
 
 //Let's configure out database
