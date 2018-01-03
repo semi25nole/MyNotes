@@ -26,16 +26,16 @@ app.use(bodyParser.text());
 app.use(express.static("public"));
 
 
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/NOTE"
+
 //connect to mongodb
 mongoose.Promise = global.Promise;
-
-mongoose.connect('mongodb://localhost/NOTES');
-
-mongoose.connection.once("open", function() {
-    console.log("Connection has been made!");
-}).on('error', function(error) {
-    console.log('Connection Error: ', error);
+mongoose.connect(MONGODB_URI, mongoOptions);
+mongoose.connection.on('error', (err) => {
+    console.error(`MongoDB connection error: ${err}`);
+    process.exit(1);
 });
+
 
 
 //Let's configure out database
