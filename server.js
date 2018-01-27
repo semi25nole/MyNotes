@@ -11,6 +11,8 @@ var mongoose = require("mongoose");
 //Now lets create a variable to hold our express function
 var app = express();
 
+var PORT = 3000;
+
 
 //Middleware
 app.use(morgan('dev'));
@@ -22,7 +24,7 @@ app.use(bodyParser.text());
 app.use(express.static("public"));
 
 
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://Semi25nole:Chance11@ds239047.mlab.com:39047/heroku_fqzk87w2";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 
 
 //connect to mongodb
@@ -151,6 +153,6 @@ app.get("/clear", function(req, res) {
 
 
 //Tell the app to listen
-app.listen(process.env.PORT, function() {
-    console.log("App is listening on: " + process.env.PORT);
+app.listen(PORT, function() {
+    console.log("App is listening on: " + PORT);
 });
